@@ -7,13 +7,13 @@ A network intrusion detection system (NIDS) that utilizes machine learning and A
 - Ensure compatibility across different environments (Network, Application, Web).
 ## Technologies
 - Python
-- Flask/Django for Backend
+- Fast/Django for Backend
 - TensorFlow for AI
-- HTML/CSS for Frontend
+- React for Frontend
 - Wireshark for Network Monitoring
 ## Team Roles
 - **Omar Yasser & Omar Hamdy**: Backend Development (API, Database).
-- **You & Abdullah**: Network & Security (IDS, Dataset Integration).
+- **Shahd & Abdullah**: Network & Security (IDS, Dataset Integration).
 - **Shams Samir & Reem Yasser**: Frontend Development (UI/UX).
 ## Dataset
 The project will use publicly available datasets like CICIDS and UNSW-NB15, which include various types of attacks (DDoS, DoS, port scanning, malware, etc.) for training and testing the machine learning models.
