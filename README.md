@@ -48,13 +48,10 @@ The system is capable of:
 
 
 ##  Project Structure
-SentriNet/
-│
-├── Backend/ # FastAPI + ML models
-├── Frontend/ # React Dashboard
-├── Database/ # Django setup
-├── DataPreparation/ # Preprocessing notebooks & scripts
-└── README.md # This file 
+# SentriNet:
+- backfront/ # FastAPI + ML models + React Dashboard
+- DataPreparation/ # Preprocessing notebooks & scripts
+- README.md # This file 
 
 
 
