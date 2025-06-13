@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{%static 'css/formstyle.css'%}" rel="stylesheet" />
+    <title>{%block title%}{%endblock%}</title>
+
+</head>
+
+<body>
+    <div class="main">
+        {% if messages %} {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-borderd alert-dismissable fade show">
+            {{ message }}
+        </div>
+        {% endfor %} {% endif %}
+        <div class="container-forms">
+        </div>
+        {%block content%} {%endblock%}
+    </div>
+</body>
+
+</html>

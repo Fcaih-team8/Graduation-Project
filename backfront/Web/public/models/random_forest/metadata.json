@@ -1,0 +1,23 @@
+{
+  "featureColumns": [
+    "packet_length",
+    "protocol_type",
+    "flow_duration",
+    "flow_bytes_per_second",
+    "flow_packets_per_second",
+    "packet_count",
+    "byte_count",
+    "avg_packet_size"
+  ],
+  "labelEncoder": {
+    "benign": 0,
+    "dos": 1,
+    "probe": 2,
+    "bruteforce": 3,
+    "injection": 4
+  },
+  "scaler": {
+    "mean": [512.0, 1.0, 1000.0, 2048.0, 100.0, 50.0, 1024.0, 64.0],
+    "std": [256.0, 0.5, 500.0, 1024.0, 50.0, 25.0, 512.0, 32.0]
+  }
+}

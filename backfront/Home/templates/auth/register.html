@@ -1,0 +1,24 @@
+{%extends 'auth/auth.html'%}
+{%block title%}Register{%endblock%}
+{%block content%}
+    <div class="signup">
+        {% for field, errors in form.errors.items %}
+        {% for error in errors %}
+        <div class="alert alert-danger alert-bordered alret-dismissable fade show">
+            {{field}} {{error}}
+        </div>
+        {%endfor%}
+        {%endfor%}
+        <form method="post">
+            {% csrf_token %}
+            <label for="chk" aria-hidden="true">Sign up</label>
+            <input type="text" name="username" placeholder="User name" required="">
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="password" name="password1" placeholder="Password" required="">
+            <input type="password" name="password2" placeholder="Confirm Password" required="">
+            <button type="submit">Sign up</button>
+            <a href="{% url 'login' %}">already have an account</a>
+
+        </form>
+    </div>
+{%endblock%}

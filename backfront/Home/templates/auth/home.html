@@ -1,0 +1,146 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentriNet - Cybersecurity Solutions(IDS)</title>
+    <link href="{%static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{%static 'css/chatbot-style.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <h1>Welcome, {{ user.username }}</h1>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="#" class="brand">SentriNet</a>
+            <div class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a href="http://localhost:5714" class="menu-link">Home</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="menu-item"><a href="{% url 'logout' %}"class="menu-link">Logout</a></li>
+                    {% else %}
+                    <li class="menu-item"><a href="{% url 'register' %}"class="menu-link">Sign-Up</a></li>
+                    <li class="menu-item"><a href="{% url 'login' %}"class="menu-link">Sign-In</a></li>
+                    {% endif %}
+                    <i class="fa-regular fa-bell fa-xl"></i>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section banner banner-section">
+            <div class="container banner-column">
+                <img class="banner-image"
+                    src="https://images.squarespace-cdn.com/content/v1/5c17fee58ab722e19b765b9d/1620835096582-EZDV9XTMH75ZN1XECXZO/Privacy_Manifesto_Graphic-01.png"
+                    alt="Illustration">
+                <div class="banner-inner">
+                    <h1 class="heading-xl">All Your Files in One Secure Location.</h1>
+                    <button class="btn btn-darken btn-inline" onclick=`location.href="http://localhost:5714/login"`>
+                        Get Started<i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us">
+            <div class="container">
+                <div class="about">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3 class="about-title" style="text-align: center;">About Us</h3>
+                            <p>
+                                <strong>Our Mission:</strong> Deliver top-tier cybersecurity solutions tailored to
+                                modern business needs.
+                            </p>
+                            <p>
+                                <strong>Our Vision:</strong> Foster a secure digital landscape where businesses thrive
+                                without fear of threats.
+                            </p>
+                            <p>
+                                Secure Base protects businesses from cyber threats with advanced solutions for desktops,
+                                websites, and networks. We provide real-time threat detection, instant alerts, and
+                                scalable security that grows with your business. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="subheader">OUR SERVICES</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <h3>Desktop Application</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p></p>
+                            <a href="http://localhost:5714">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+
+                            <h3>Network</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p></p>
+                            <a href="http://localhost:5173" target="_blank">Go to Network</a>   
+                        </div>
+                    </div>
+                </div>  
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+
+                            <h3>Websites</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p></p>
+                            <a href="http://localhost:5174" target="_blank">Go to Dashboard</a>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbox" class="chatbox">
+        <div class="chatbox-header">
+            Chat with Us!
+            <button id="close-chatbot" style="float: right; background: none; border: none; color: white; font-size: 16px; cursor: pointer;">X</button>
+        </div>
+        <div class="chatbox-body">
+            <!-- Messages will appear here -->
+            <p>Hello! How can I help you today?</p>
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" id="chatbot-input" placeholder="Type a message...">
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/chatbot-script.js' %}"></script>
+</body>
+
+</html>

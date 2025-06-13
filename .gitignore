@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.ipynb_checkpoints
+**/node_modules/
+backfront/Web/backend/data/data/extracted/
+backfront/Network/node_modules
+backfront/Web/node_modules
