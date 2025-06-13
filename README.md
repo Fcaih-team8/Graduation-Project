@@ -106,3 +106,12 @@ npm run dev
 - Net.front: "http://localhost:5173"
 - Web.back: "http://localhost:3000"
 - Web.front: "http://localhost:5174"
+
+# Disclaimer
+This system is built for educational purposes as part of a graduation project.
+Not intended for commercial or military use.
+
+# Contact
+For inquiries or collaborations:
+- shahd.tamer.ibrahim@outlook.com
+- LinkedIn: https://www.linkedin.com/in/shahd-tamer-541244228
